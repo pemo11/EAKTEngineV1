@@ -1,0 +1,12 @@
+C:\Users\PsHub-Admin\Documents\Visual Studio 2015\Projects\EAKTEngineV1\EAKTEngineV1\binx\NLog.config
+C:\Users\PsHub-Admin\Documents\Visual Studio 2015\Projects\EAKTEngineV1\EAKTEngineV1\binx\EAKTEngineV1.dll.config
+C:\Users\PsHub-Admin\Documents\Visual Studio 2015\Projects\EAKTEngineV1\EAKTEngineV1\binx\EAKTEngineV1.dll
+C:\Users\PsHub-Admin\Documents\Visual Studio 2015\Projects\EAKTEngineV1\EAKTEngineV1\binx\EAKTEngineV1.pdb
+C:\Users\PsHub-Admin\Documents\Visual Studio 2015\Projects\EAKTEngineV1\EAKTEngineV1\binx\Aspose.Pdf.dll
+C:\Users\PsHub-Admin\Documents\Visual Studio 2015\Projects\EAKTEngineV1\EAKTEngineV1\binx\Aspose.Words.dll
+C:\Users\PsHub-Admin\Documents\Visual Studio 2015\Projects\EAKTEngineV1\EAKTEngineV1\binx\DevExpress.Mvvm.dll
+C:\Users\PsHub-Admin\Documents\Visual Studio 2015\Projects\EAKTEngineV1\EAKTEngineV1\binx\Lucene.Net.dll
+C:\Users\PsHub-Admin\Documents\Visual Studio 2015\Projects\EAKTEngineV1\EAKTEngineV1\binx\NLog.dll
+C:\Users\PsHub-Admin\Documents\Visual Studio 2015\Projects\EAKTEngineV1\EAKTEngineV1\obj\Debug\EAKTEngineV1_X.csprojResolveAssemblyReference.cache
+C:\Users\PsHub-Admin\Documents\Visual Studio 2015\Projects\EAKTEngineV1\EAKTEngineV1\obj\Debug\EAKTEngineV1.dll
+C:\Users\PsHub-Admin\Documents\Visual Studio 2015\Projects\EAKTEngineV1\EAKTEngineV1\obj\Debug\EAKTEngineV1.pdb

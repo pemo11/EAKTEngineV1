@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<eakt:EAkte xmlns:eakt="urn:eakte">
+  <eakt:Dokument Pfad="Akte3" Name="Dokument1.bmp" DokNr="1" Schriftsatz="Nicht festgelegt" Eingang="25.04.2014" Ersteller="Kein Ersteller" Ampel="Grün" />
+  <eakt:Dokument Pfad="Akte3" Name="Dokument1.png" DokNr="2" Schriftsatz="Nicht festgelegt" Eingang="25.04.2014" Ersteller="Kein Ersteller" Ampel="Grün" />
+  <eakt:Dokument Pfad="Akte3" Name="Dokument1.jpg" DokNr="3" Schriftsatz="Nicht festgelegt" Eingang="25.04.2014" Ersteller="Kein Ersteller" Ampel="Grün" />
+  <eakt:Dokument Pfad="Akte3" Name="Dokument1.jpeg" DokNr="4" Schriftsatz="Nicht festgelegt" Eingang="25.04.2014" Ersteller="Kein Ersteller" Ampel="Grün" />
+</eakt:EAkte>

@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<eakt:EAkte xmlns:eakt="urn:eakte">
+  <eakt:Dokument Pfad="Akte11" Name="elasticsearch-quick-start_Auszug.pdf" DokNr="1" Schriftsatz="Nicht festgelegt" Eingang="25.04.2014" Ersteller="Kein Ersteller" Ampel="Grün" />
+</eakt:EAkte>

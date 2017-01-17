@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FtpDeploymentTarget Server="waws-prod-am2-057.ftp.azurewebsites.windows.net" Port="21" UserName="EAKTEngineDoku\$EAKTEngineDoku" Password="ou2vFna8msLUu1dFdlZmvGLDuQu8jOISsZs6DkXXlWdah7TslXEqOuamLh8uvz/JW2O0XcYDrOXynaZuTIokTA==" RootPath="/site/wwwroot" MaxConnections="10" Id="06e32885-4aef-4b4b-9f7e-b1e46add40eb" Name="EAKTEngineDoku - FTP" IsIncrementalDeploymentEnabled="true" IsLocalePrefixEnabled="true" IsIncludedInBuildByDefault="false" Url="http://eaktenginedoku.azurewebsites.net" IsLogEnabled="false">
+  <ExcludedPublishingItemGroups>
+    <PublishingItemGroup Name="COMPILEDHELP" />
+  </ExcludedPublishingItemGroups>
+</FtpDeploymentTarget>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<License>
+  <Data>
+    <LicensedTo>ComponentSource</LicensedTo>
+    <LicenseType>Developer OEM</LicenseType>
+    <LicenseNote>Limited to 1 developer.</LicenseNote>
+    <OrderID>140212061241</OrderID>
+    <OEM>This is a redistributable license</OEM>
+    <Products>
+      <Product>Aspose.Words for .NET</Product>
+    </Products>
+    <EditionType>Enterprise</EditionType>
+    <SerialNumber>faeec9c0-5a42-4607-90e1-aef23e8586c8</SerialNumber>
+    <SubscriptionExpiry>20150213</SubscriptionExpiry>
+    <LicenseVersion>2.2</LicenseVersion>
+  </Data>
+  <Signature>uHupqEOwUfz2kdW+i6yGtERpRG7a++hEZLPxZxyU2lNhTVaUd3sa+hCXwN43DUt8FVO90hFvZYyF4/S/lPlQCxWYZkZO7f3AcVVK43hjesXAh7rN7Iicu7PmvXaGe1yl1oZCFbK34sXvojVSBR5fCf3O7da6m3YHnXFPLmlgU/0=</Signature>
+</License>

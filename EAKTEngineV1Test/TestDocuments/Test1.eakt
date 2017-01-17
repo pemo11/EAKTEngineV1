@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<eakt:EAkte xmlns:eakt="urn:eakte">
+  <eakt:Dokument Pfad="Akte1" Name="1_A_10873_10_OVG_Eingangsbestätigung_201007290838051.doc" DokNr="1" Schriftsatz="Klage" Eingang="01.02.2016" Ersteller="Dr. Meier" Ampel="Grün" />
+  <eakt:Dokument Pfad="Akte1" Name="1_A_10873_10_OVG_Eingangsbestätigung_201007290838051.pdf" DokNr="2" Schriftsatz="Klage" Eingang="01.03.2016" Ersteller="Dr. Meier" Ampel="Grün" />
+  <eakt:Dokument Pfad="Akte1" Name="3 K 764-09.pdf" DokNr="3" Schriftsatz="Begründung" Eingang="11.09.2016" Ersteller="Dr. Pfeiffer" Ampel="Grün" />
+  <eakt:Dokument Pfad="Akte1" Name="20090810132038_Zuleitung Klage_3_K_764_09_MZ.pdf" DokNr="4" Schriftsatz="Begründung" Eingang="15.09.2016" Ersteller="Dr. Müller" Ampel="Rot" />
+  <eakt:Dokument Pfad="Akte1" Name="20091015115010_Beschluss gsw_35_3_K_764_09_MZ.pdf" DokNr="5" Schriftsatz="Klage" Eingang="20.09.2016" Ersteller="Dr. Möller" Ampel="Gelb" />
+  <eakt:Dokument Pfad="Akte1" Name="20091103140542_Aktenübersendung_3_K_764_09_MZ.pdf" DokNr="6" Schriftsatz="Vermerk" Eingang="25.09.2016" Ersteller="Dr. Meier" Ampel="Gelb" />
+</eakt:EAkte>

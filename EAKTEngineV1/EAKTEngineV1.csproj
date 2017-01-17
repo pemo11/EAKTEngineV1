@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F1EED602-7C63-46CE-9D99-23F408090C41}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EAKTEngineV1</RootNamespace>
+    <AssemblyName>EAKTEngineV1</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <DocumentationFile>bin\Debug\EAKTEngineV1.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Pdf, Version=8.5.0.0, Culture=neutral, PublicKeyToken=47b2d0fcacdd3eb6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Assemblies\Aspose.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Words, Version=13.10.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Assemblies\Aspose.Words.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Mvvm, Version=16.2.0.0, Culture=neutral, PublicKeyToken=382ad28f6ae31f30, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Assemblies\DevExpress.Mvvm.dll</HintPath>
+    </Reference>
+    <Reference Include="Lucene.Net, Version=3.0.3.0, Culture=neutral, PublicKeyToken=85089178b9ac3181, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Assemblies\Lucene.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Lucene.Net.Contrib.Analyzers, Version=3.0.3.0, Culture=neutral, PublicKeyToken=85089178b9ac3181, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Assemblies\Lucene.Net.Contrib.Analyzers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>Assemblies\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Assemblies\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Helper\AppInfo.cs" />
+    <Compile Include="Helper\CommentFunctions.cs" />
+    <Compile Include="Helper\CommentSearchRecord.cs" />
+    <Compile Include="Helper\DocumentConvertRecord.cs" />
+    <Compile Include="Helper\EAktConverter.cs" />
+    <Compile Include="Helper\EAktDocumentFilter.cs" />
+    <Compile Include="Helper\EAKTEngineV1Exception.cs" />
+    <Compile Include="Helper\EAktFunctions.cs" />
+    <Compile Include="Helper\ExtensionMethods.cs" />
+    <Compile Include="Helper\FileDocumentService.cs" />
+    <Compile Include="Helper\GlobalFunctions.cs" />
+    <Compile Include="Helper\GlobalVars.cs" />
+    <Compile Include="Helper\IDocumentService.cs" />
+    <Compile Include="Helper\LuceneFunctions.cs" />
+    <Compile Include="Helper\PdfExportRecord.cs" />
+    <Compile Include="Helper\PdfFunctions.cs" />
+    <Compile Include="Helper\PreviewFunctions.cs" />
+    <Compile Include="Messages\AddStatusMessage.cs" />
+    <Compile Include="Messages\OpenFileDialogMessage.cs" />
+    <Compile Include="Messages\PdfDocumentReadyMessage.cs" />
+    <Compile Include="Messages\PdfViewerMessage.cs" />
+    <Compile Include="Messages\PopupMessage.cs" />
+    <Compile Include="Messages\SetProgressbarMessage.cs" />
+    <Compile Include="Model\EAktDocument.cs" />
+    <Compile Include="Model\EAktComment.cs" />
+    <Compile Include="Model\PdfBookmark.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\EAktDocumentsViewModel.cs" />
+    <Compile Include="ViewModel\EAktDocumentViewModel.cs" />
+    <Compile Include="ViewModel\EAktCommentViewModel.cs" />
+    <Compile Include="ViewModel\EAktCommentsViewModel.cs" />
+    <Compile Include="ViewModel\LRUDocumentsViewModel.cs" />
+    <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\StatusMessagesViewModel.cs" />
+    <Compile Include="ViewModel\StatusMessageViewModel.cs" />
+    <Compile Include="ViewModel\PdfBookmarksViewModel.cs" />
+    <Compile Include="ViewModel\PdfBookmarkViewModel.cs" />
+    <Compile Include="ViewModel\SearchResultViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <EmbeddedResource Include="Properties\Aspose.Pdf-1-351582.lic" />
+    <EmbeddedResource Include="Properties\Aspose.Words-4.lic" />
+    <None Include="documentation\documentation.dxp" />
+    <None Include="NLog.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assemblies\Aspose.Pdf.dll" />
+    <Content Include="Assemblies\Aspose.Words.dll" />
+    <Content Include="Assemblies\DevExpress.Mvvm.dll" />
+    <Content Include="Assemblies\DevExpress.Mvvm.UI.dll" />
+    <Content Include="Assemblies\Lucene.Net.Contrib.Analyzers.dll" />
+    <Content Include="Assemblies\Lucene.Net.dll" />
+    <Content Include="Assemblies\Microsoft.Practices.Unity.dll" />
+    <Content Include="Assemblies\NLog.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties DocumentXCommentEditorState="&lt;HtmlEditState&gt;&#xA;  &lt;Attributes&gt;&#xA;    &lt;Attribute key=&quot;scrollPosition&quot; valuetype=&quot;integer&quot;&gt;0&lt;/Attribute&gt;&#xA;  &lt;/Attributes&gt;&#xA;&lt;/HtmlEditState&gt;" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

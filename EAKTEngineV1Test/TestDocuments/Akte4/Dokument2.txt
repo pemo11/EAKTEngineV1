@@ -1,0 +1,22 @@
+3/5 Die neue Microsoft Operation Management Suite (OMS) im Überblick – Konkurrenz für SSCM?
+Autor: Peter Monadjemi
+Unter dem unscheinbaren Namen Microsoft Operation Management Suite (OMS) arbeitet Microsoft an einer neuen Generation von Administrationswerkzeugen, die 100% unter Azure laufen. Per OMS lassen sich einzelne Server administrieren und z.B. bezüglich ihres „Gesundheitszustandes“ überwachen. Die Server laufen „on premise“, stehen also im Rechenzentrum des Unternehmens oder an einem anderen, grundsätzlich beliebigen Ort. Mit dabei ist u.a. eine umfangreiche Auswertung von Logdateien jeglichen Formats und der Daten von Leistungsindikatoren. Die zu überwachenden Computer können sowohl VMs sein, die theoretisch auf einer beliebigen Cloud-Plattform betrieben werden können, als auch die Server im eigenen Unternehmen.
+Bezüglich ihrer Möglichkeiten und Zielsetzung ähnelt OMS damit dem System Center Configuration Manager (SCCM), soll diesen laut Microsoft aber nicht ablösen. Das alleine beweist der Umstand, dass die aktuelle System Center 2016-Produktfamilie viele Neuerungen aufweist, die nicht nur für Bestandskunden gedacht sind.
+
+Abbildung 1: Text
+
+Abbildung 2: Text
+OMS ist aus zweierlei Sicht faszinierend:
+? Die, teilweise aus SCCM übernommen, Möglichkeiten zum Erstellen von PowerShell-Skripten und Workflows auf der Basis von Runbools und der Umgang mit DSC-Ressourcen zeigt eindrucksvoll was mit dieser Technik alles möglich ist, wenn sie in ein Gesamtkonzept eingebettet wird.
+? OMS richtet sich nicht nur an die typischen Großkunden, für die Anschaffung von SCCM-Lizenzen kein Thema ist, sondern auch kleinere Unternehmen und sogar Schulen und andere Einrichtungen mit knappen Budgets. Dafür sorgt die kostenlose Variante von OMS, die die Verwaltung von bis zu 5 Servern ermöglicht.
+OMS ist auch ein Gradmesser für die Akzeptanz cloudbasierter Lösungen in Unternehmen, die weder aus der Internetbranche noch aus der Startup-Szene stammen und bei denen personenbezogene Daten strengen Datenschutzrichtlinien unterliegen.
+3/5.1 Zusammenfassung
+Mit der Operation Management Suite (OMS) bietet Microsoft auf der Grundlage ihrer Cloud-Plattform Azure einen umfangreichen Satz an Verwaltungstools an, die alle browserbasierend genutzt werden, und mit deren Hilfe u.a. Konfigurationsdaten ausgewertet werden, die von den zu verwaltenden Servern mit Hilfe eines Agenten abgefragt, in die Cloud übertragen und dort so aufbereitet werden, dass sie nicht nur im Rahmen der Azure-typischen Weboberfläche angezeigt, sondern auch mit Hilfe spezieller Datenanalysetools wie z.B. PowerBI ausgewertet werden können.
+In Deutschland, Österreich und der Schweiz dürfte OMS sich zunächst schwer tun, da es auch im Jahr 2016 immer noch starke Vorbehalte gegen die Übergabe von Daten aus dem operativen Geschäft an ein in den USA ansässiges Unternehmen gibt bzw. man generell der Cloud skeptisch gegenübersteht. Für Unternehmen und Organisationen, bei denen diese Vorbehalte nicht gibt, eröffnen sich neue Möglichkeiten nicht was die operative Instandhaltung der eigenen Server angeht, sondern auch was das Reagieren von Störrungen angeht, die in der Vergangenheit eventuell gar nicht aufgefallen sind. OMS hat für Microsoft in mehrfacherer Hinsicht eine strategische Bedeutung. Entscheidet sich ein Unternehmen, ihre Server per Cloud-Software verwalten zu lassen ist der Schritt, auch die Server in die Cloud zu verlagern nicht mehr ganz so groß.
+OMS ist, sollte es erfolgreich sein, auch ein Werkzeug für die neue Generation junger Administratoren, die mit der Cloud groß werden und daher auch unbelastet von einer „das haben wir immer schon so gemacht“-Mentalität ihre Herausforderungen angehen.
+Teil Fehler! Kein Text mit angegebener Formatvorlage im Dokument.   Seite 2	Die neue Microsoft Operation Management Suite (OMS) im Überblick – Konkurrenz für SSCM?
+Fehler! Kein Text mit angegebener Formatvorlage im Dokument.	
+
+Die neue Microsoft Operation Management Suite (OMS) im Überblick – Konkurrenz für SSCM?	Teil Fehler! Kein Text mit angegebener Formatvorlage im Dokument.   Seite 1
+	Fehler! Kein Text mit angegebener Formatvorlage im Dokument.
+

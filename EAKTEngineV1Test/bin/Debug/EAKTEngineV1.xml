@@ -1,0 +1,1360 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EAKTEngineV1</name>
+    </assembly>
+    <members>
+        <member name="T:EAKTEngineV1.Helper.AppInfo">
+            <summary>
+            Stellt allgemeine Angaben für die App zur Verfügung
+            </summary>
+        </member>
+        <member name="T:EAKTEngineV1.Helper.CommentFunctions">
+            <summary>
+            Enthält Functions für den Umgang mit EAkt-Kommentaren
+            </summary>
+        </member>
+        <member name="M:EAKTEngineV1.Helper.CommentFunctions.LoadEAktComments(EAKTEngineV1.ViewModel.EAktDocumentsViewModel)">
+            <summary>
+            Alle Kommentare laden und den Dokumenten zuordnen
+            </summary>
+            <param name="documentsVm"></param>
+        </member>
+        <member name="M:EAKTEngineV1.Helper.CommentFunctions.SaveEAktComments(EAKTEngineV1.ViewModel.EAktDocumentsViewModel,System.String)">
+            <summary>
+            Speichern aller Kommentare der EAkt-Mappe
+            </summary>
+            <param name="documentsVm"></param>
+        </member>
+        <member name="M:EAKTEngineV1.Helper.CommentFunctions.SaveEAktComments(EAKTEngineV1.ViewModel.EAktDocumentsViewModel,System.Boolean)">
+            <summary>
+            Abspeichern aller Aktenkommentare unter der Standarddatei
+            </summary>
+            <param name="documentsVm"></param>
+            <param name="validationMode"></param>
+        </member>
+        <member name="T:EAKTEngineV1.Helper.CommentSearchRecord">
+            <summary>
+            Repräsentiert die Parameter der Kommentarsuche
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.Helper.CommentSearchRecord.SearchWord">
+            <summary>
+            Das Suchwort
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.Helper.CommentSearchRecord.Color">
+            <summary>
+            Die Suchfarbe
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.Helper.CommentSearchRecord.CreationDate">
+            <summary>
+            Der Zeitpunkt der Erstellung
+            </summary>
+        </member>
+        <member name="T:EAKTEngineV1.Helper.DocumentConvertRecord">
+            <summary>
+            Fasst die Daten einer Konvertierung zusammen
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.Helper.DocumentConvertRecord.DocumentConvertedCount">
+            <summary>
+            Anzahl der konvertierten Dokumente
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.Helper.DocumentConvertRecord.ConvertErrorCount">
+            <summary>
+            Anzahl der aufgetretenen Fehler
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.Helper.DocumentConvertRecord.PdfDocumentCount">
+            <summary>
+            Anzahl der konvertierten Pdf-Dokumene
+            </summary>
+        </member>
+        <member name="T:EAKTEngineV1.Helper.EAktConverter">
+            <summary>
+            Stellt Konvertierungsfunktionen zur Verfügung
+            </summary>
+        </member>
+        <member name="F:EAKTEngineV1.Helper.EAktConverter.statusMessage">
+            <summary>
+            Private Variablen
+            </summary>
+        </member>
+        <member name="M:EAKTEngineV1.Helper.EAktConverter.ConvertDocuments(EAKTEngineV1.ViewModel.EAktDocumentsViewModel)">
+            <summary>
+            Konvertiert alle Dokumente der EAKt-Datei
+            </summary>
+            <param name="Dokumente"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAKTEngineV1.Helper.EAktConverter.DeleteDirectory(System.String)">
+            <summary>
+            Hilfsfunktion für das zuverlässige Löschen eines Verzeichnisses
+            </summary>
+            <param name="path"></param>
+        </member>
+        <member name="M:EAKTEngineV1.Helper.EAktConverter.ConvertWordDocument(EAKTEngineV1.ViewModel.EAktDocumentViewModel,System.String)">
+            <summary>
+            Konvertiert eine Word-Datei in eine Pdf-Datei
+            </summary>
+            <param name="EAktDocument"></param>
+            <param name="PdfPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAKTEngineV1.Helper.EAktConverter.ConvertHtmlDocument(EAKTEngineV1.ViewModel.EAktDocumentViewModel,System.String)">
+            <summary>
+            Konvertiert eine Html-Datei in eine Pdf-Datei
+            </summary>
+            <param name="EAktDocument"></param>
+            <param name="PdfPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAKTEngineV1.Helper.EAktConverter.ConvertRtfDocument(EAKTEngineV1.ViewModel.EAktDocumentViewModel,System.String)">
+            <summary>
+            Konvertiert ein Rtf-Dokument nach Pdf
+            </summary>
+            <param name="Document"></param>
+            <param name="PdfPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAKTEngineV1.Helper.EAktConverter.ConvertBitmapDocument(EAKTEngineV1.ViewModel.EAktDocumentViewModel,System.String)">
+            <summary>
+            Konvertiert eine Bitmap (außer Tiff) in eine Pdf-Datei
+            </summary>
+            <param name="Document"></param>
+            <param name="PdfPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAKTEngineV1.Helper.EAktConverter.ConvertTiffDocument(EAKTEngineV1.ViewModel.EAktDocumentViewModel,System.String)">
+            <summary>
+            Konvertiert eine Tiff-Datei in eine Pdf-Datei
+            </summary>
+            <param name="Document"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAKTEngineV1.Helper.EAktConverter.ConvertTextDocument(EAKTEngineV1.ViewModel.EAktDocumentViewModel,System.String)">
+            <summary>
+            Konvertiert eine Textdatei in eine Pdf-Datei
+            </summary>
+            <param name="Document"></param>
+            <param name="PdfPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAKTEngineV1.Helper.EAktConverter.SendStatusMessage(System.String,System.Boolean)">
+            <summary>
+            Sendet eine Meldung als StatusMessageViewModel-Objekt
+            </summary>
+            <param name="Message"></param>
+        </member>
+        <member name="T:EAKTEngineV1.Helper.EAktDocumentFilter">
+            <summary>
+            Repräsentiert einen Filter für die Dokumente der EAkt-Mappe
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.Helper.EAktDocumentFilter.Ersteller">
+            <summary>
+            Filter nach dem Ersteller
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.Helper.EAktDocumentFilter.Schriftsatz">
+            <summary>
+            Filtern nach der Schriftsatz-Eigenschaft
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.Helper.EAktDocumentFilter.EingangVon">
+            <summary>
+            Filtern nach dem Eingang Von-Datum
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.Helper.EAktDocumentFilter.EingangBis">
+            <summary>
+            Filtern nach dem Eingang Bis-Datum
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.Helper.EAktDocumentFilter.Ampel">
+            <summary>
+            Filtern nach der Dokument-Ampel
+            </summary>
+        </member>
+        <member name="T:EAKTEngineV1.Helper.EAktFunctions">
+            <summary>
+            Functions für den Umgang mit EAkt-Mappendateien
+            </summary>
+        </member>
+        <member name="F:EAKTEngineV1.Helper.EAktFunctions.statusMessage">
+            <summary>
+            Private Variablen
+            </summary>
+        </member>
+        <member name="M:EAKTEngineV1.Helper.EAktFunctions.LoadEAkt2(System.String)">
+            <summary>
+            Nur provisorisch, da ein EAktDocumentsViewModel-Objekt offiziell für den DI Container instanziert wird
+            </summary>
+            <param name="EAktPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAKTEngineV1.Helper.EAktFunctions.LoadEAkt(System.String)">
+            <summary>
+            Laden einer EAkt-Datei
+            </summary>
+            <param name="EAktPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAKTEngineV1.Helper.EAktFunctions.ReadDirectory(System.String,System.Int32,System.Xml.Linq.XElement)">
+            <summary>
+            Liest ein Verzeichnis rekursiv ein und gibt das resultierende Xml als XElement zurück
+            </summary>
+            <param name="DirectoryPath"></param>
+            <param name="DocumentIndex"></param>
+            <param name="xRoot"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAKTEngineV1.Helper.EAktFunctions.ReadEAktDirectory(System.String,System.String)">
+            <summary>
+            Liest alle Dokumente in einem Verzeichnis ein
+            </summary>
+            <param name="Path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAKTEngineV1.Helper.EAktFunctions.SaveEAktDocument(EAKTEngineV1.ViewModel.EAktDocumentsViewModel,System.String)">
+            <summary>
+            Speichert die aktuelle EAkt-Mappe in einer Xml-Datei
+            </summary>
+            <param name="EAktPath"></param>
+        </member>
+        <member name="M:EAKTEngineV1.Helper.EAktFunctions.ReadDocumentSelection(EAKTEngineV1.ViewModel.EAktDocumentsViewModel)">
+            <summary>
+            List die in der Kommentardatei gespeicherte Dokumenteauswahl ein und markiert die
+            Dokumente als selektiert
+            </summary>
+            <param name="documentsVm"></param>
+        </member>
+        <member name="M:EAKTEngineV1.Helper.EAktFunctions.SaveDocumentSelection(EAKTEngineV1.ViewModel.EAktDocumentsViewModel)">
+            <summary>
+            Speichern der Dokumenteauswahl in Gestalt selektierter Dokumente
+            in der Kommentardatei
+            </summary>
+            <param name="documentsVm"></param>
+        </member>
+        <member name="T:EAKTEngineV1.Helper.ExtensionMethods">
+            <summary>
+            Enthält Extension Methods
+            </summary>
+        </member>
+        <member name="M:EAKTEngineV1.Helper.ExtensionMethods.ToObservable``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Erweitert Collections um eine ToObservable-Methode
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="enumerable"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EAKTEngineV1.Helper.FileDocumentService">
+            <summary>
+            Wird für das Laden der Dokumente über das Dateisystem verwendet
+            </summary>
+        </member>
+        <member name="M:EAKTEngineV1.Helper.FileDocumentService.EAKTEngineV1#Helper#IDocumentService#GetDocuments(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="EAktPath"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EAKTEngineV1.Helper.GlobalFunctions">
+            <summary>
+            Enthält allgemeine Funktionen
+            </summary>
+        </member>
+        <member name="F:EAKTEngineV1.Helper.GlobalFunctions.logger">
+            <summary>
+            Private Variablen
+            </summary>
+        </member>
+        <member name="M:EAKTEngineV1.Helper.GlobalFunctions.#cctor">
+            <summary>
+            Statischer Konstruktor
+            </summary>
+        </member>
+        <member name="M:EAKTEngineV1.Helper.GlobalFunctions.LogInfo(System.String)">
+            <summary>
+            Schreiben einer Info-Meldung
+            </summary>
+            <param name="Message"></param>
+        </member>
+        <member name="M:EAKTEngineV1.Helper.GlobalFunctions.LogError(System.String,System.SystemException)">
+            <summary>
+            Schreiben einer Fehlermeldung
+            </summary>
+            <param name="Message"></param>
+            <param name="ex"></param>
+        </member>
+        <member name="T:EAKTEngineV1.Helper.GlobalVars">
+            <summary>
+            Definiert globale Variablen
+            </summary>
+        </member>
+        <member name="T:EAKTEngineV1.Helper.IDocumentService">
+            <summary>
+            Schnittstelle für Klassen, die EAktDocumentViewModel-Objekte zur Verfügung stellen
+            </summary>
+        </member>
+        <member name="M:EAKTEngineV1.Helper.IDocumentService.GetDocuments(System.String)">
+            <summary>
+            Einlesen der Dokumente über einen Pfad oder einer URI
+            </summary>
+            <param name="EAktPath"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EAKTEngineV1.Helper.LuceneFunctions">
+            <summary>
+            Stellt Funktionen für die Volltextsuche zur Verfügung
+            </summary>
+        </member>
+        <member name="F:EAKTEngineV1.Helper.LuceneFunctions.statusMessage">
+            <summary>
+            Private Variablen
+            </summary>
+        </member>
+        <member name="M:EAKTEngineV1.Helper.LuceneFunctions.CreateIndex(System.Collections.ObjectModel.ObservableCollection{EAKTEngineV1.ViewModel.EAktDocumentViewModel})">
+            <summary>
+            Index anlegen mit dem Inhalt der gesamten Datei
+            </summary>
+            <param name="Dokumente"></param>
+        </member>
+        <member name="M:EAKTEngineV1.Helper.LuceneFunctions.CreateLineIndex(System.Collections.ObjectModel.ObservableCollection{EAKTEngineV1.ViewModel.EAktDocumentViewModel})">
+            <summary>
+            Index anlegen mit jeder Zeile einer Pdf-Datei
+            </summary>
+            <param name="Dokumente"></param>
+        </member>
+        <member name="M:EAKTEngineV1.Helper.LuceneFunctions.StartSearch(System.String)">
+            <summary>
+            Volltextsuche nach einem Suchbegriff
+            </summary>
+            <param name="Suchwort"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EAKTEngineV1.Helper.PdfExportRecord">
+            <summary>
+            Repräsentiert die Parameter für den Pdf-Export einer EAkt-Mappe
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.Helper.PdfExportRecord.PageMode">
+            <summary>
+            Legt fest, ob die Seiten einzeln gespeichert werden
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.Helper.PdfExportRecord.Password">
+            <summary>
+            Das obligatorische Kennwort unverschlüsselt
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.Helper.PdfExportRecord.TotalPageCount">
+            <summary>
+            Gibt die Gesamtzahl der exportierten Seiten an
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.Helper.PdfExportRecord.ExportDirectoryPath">
+            <summary>
+            Optionaler Verzeichnispfad für die exportierte Pdf-Datei
+            </summary>
+        </member>
+        <member name="T:EAKTEngineV1.Helper.PdfFunctions">
+            <summary>
+            Methoden für den Umgang mit Pdf-Dateien
+            </summary>
+        </member>
+        <member name="F:EAKTEngineV1.Helper.PdfFunctions.statusMessage">
+            <summary>
+            Private Variablen
+            </summary>
+        </member>
+        <member name="M:EAKTEngineV1.Helper.PdfFunctions.GetPageCount(System.String,System.String)">
+            <summary>
+            Holt die Anzahl Seiten einer Pdf-Datei - Passwort ist optional
+            </summary>
+            <param name="Path"></param>
+            <param name="Password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAKTEngineV1.Helper.PdfFunctions.CheckPasswordProtected(System.String)">
+            <summary>
+            Gibt ab, ob eine Pdf-Datei mit einem Kennwort geschützt ist
+            </summary>
+            <param name="Path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAKTEngineV1.Helper.PdfFunctions.CheckSignature(System.String)">
+            <summary>
+            Gibt an, ob Pdf-Dokument eine Signatur enthält
+            </summary>
+            <param name="PdfPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAKTEngineV1.Helper.PdfFunctions.RemoveSignature(EAKTEngineV1.ViewModel.EAktDocumentViewModel)">
+            <summary>
+            Entfernt die Signaturen einer Pdf-Datei und legt von der Datei mit Signatur eine Kopie an
+            </summary>
+            <param name="PdfPath"></param>
+        </member>
+        <member name="M:EAKTEngineV1.Helper.PdfFunctions.EAktPdfMerge(EAKTEngineV1.ViewModel.EAktDocumentsViewModel,EAKTEngineV1.Helper.PdfExportRecord)">
+            <summary>
+            Fasst alle Dokumente einer EAkt-Mappe zu einer Pdf-Datei zusammen
+            </summary>
+            <param name="documentsVm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAKTEngineV1.Helper.PdfFunctions.ExtractText(EAKTEngineV1.ViewModel.EAktDocumentsViewModel)">
+            <summary>
+            Text aus allen Pdf-Dateien extrahieren und separat speichern
+            </summary>
+            <param name="documentsVm"></param>
+            <param name=""></param>
+        </member>
+        <member name="M:EAKTEngineV1.Helper.PdfFunctions.ExtractImages(EAKTEngineV1.ViewModel.EAktDocumentsViewModel)">
+            <summary>
+            Images aus allen Pdf-Dateien extrahieren und separat speichern
+            </summary>
+            <param name="documentsVm"></param>
+        </member>
+        <member name="M:EAKTEngineV1.Helper.PdfFunctions.SaveFirstPage(System.String)">
+            <summary>
+            Speichert die erste Seite als eigenes Pdf-Dokument im Temp-Verzeichnis
+            </summary>
+            <param name="PdfPath"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EAKTEngineV1.Helper.PreviewFunctions">
+            <summary>
+            Enthält Functions für das Anlegen von Vorschauseiten
+            </summary>
+        </member>
+        <member name="F:EAKTEngineV1.Helper.PreviewFunctions.statusMessage">
+            <summary>
+            Private Variablen
+            </summary>
+        </member>
+        <member name="M:EAKTEngineV1.Helper.PreviewFunctions.CreateDocumentsPreview(System.Collections.ObjectModel.ObservableCollection{EAKTEngineV1.ViewModel.EAktDocumentViewModel})">
+            <summary>
+            Legt eine Seitenvorschau an
+            </summary>
+            <param name="Documents"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAKTEngineV1.Helper.PreviewFunctions.CreateDocumentPreview(EAKTEngineV1.ViewModel.EAktDocumentViewModel,System.String)">
+            <summary>
+            Legt die Seitenvorschau für ein Dokument an
+            </summary>
+            <param name="Document"></param>
+            <param name="PreviewPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAKTEngineV1.Helper.PreviewFunctions.CreatePdfPagePreviewAsync(System.String)">
+            <summary>
+            Legt für eine Pdf-Datei Vorschauseiten als Jpg-Dateien an
+            </summary>
+            <param name="PdfPath"></param>
+        </member>
+        <member name="T:EAKTEngineV1.Messages.AddStatusMessage">
+            <summary>
+            Schickt eine Statusmeldung an die Host-Anwendung
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.Messages.AddStatusMessage.StatusMessage">
+            <summary>
+            Die Meldung als Zeichenkette
+            </summary>
+        </member>
+        <member name="T:EAKTEngineV1.Messages.OpenFileDialogMessage">
+            <summary>
+            Öffnet den Dateiauswahldialog in der Host-Anwendung
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.Messages.OpenFileDialogMessage.DialogTitle">
+            <summary>
+            Der Titel des Dialogfeldes
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.Messages.OpenFileDialogMessage.DialogFilter">
+            <summary>
+            Der Filter für die Dateiauswahl
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.Messages.OpenFileDialogMessage.Execute">
+            <summary>
+            Die Aktion, die durch den OK-Button ausgeführt wird
+            </summary>
+        </member>
+        <member name="T:EAKTEngineV1.Messages.PdfDocumentReadyMessage">
+            <summary>
+            Meldet, dass ein Pdf-Dokument fertig ist und vom Pdf-Viewer angezeigt werden kann
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.Messages.PdfDocumentReadyMessage.PdfPath">
+            <summary>
+            Der Pfad des Pdf-Dokuments
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.Messages.PdfDocumentReadyMessage.FirstPagePath">
+            <summary>
+            Der Pfad der erste Seite
+            </summary>
+        </member>
+        <member name="T:EAKTEngineV1.Messages.PdfViewerAction">
+            <summary>
+            Mögliche Aktionen für die PdfViewer-Komponente
+            </summary>
+        </member>
+        <member name="T:EAKTEngineV1.Messages.PdfViewerMessage">
+            <summary>
+            Repräsentiert eine Meldung an die PdfViewer-Komponente
+            </summary>
+        </member>
+        <member name="F:EAKTEngineV1.Messages.PdfViewerMessage.action">
+            <summary>
+            Private Variablen
+            </summary>
+        </member>
+        <member name="M:EAKTEngineV1.Messages.PdfViewerMessage.#ctor(EAKTEngineV1.Messages.PdfViewerAction)">
+            <summary>
+            Konstruktor mit Parameter
+            </summary>
+            <param name="Action"></param>
+        </member>
+        <member name="P:EAKTEngineV1.Messages.PdfViewerMessage.Action">
+            <summary>
+            Steht für die Aktion, die die PdfViewer-Komponente ausführen soll
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.Messages.PdfViewerMessage.PageNumber">
+            <summary>
+            Steht für die Seitennummer, die angezeigt werden soll
+            </summary>
+        </member>
+        <member name="T:EAKTEngineV1.Messages.PopupMessage">
+            <summary>
+            Zeigt eine Popup-Meldung in der Host-Anwendung an
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.Messages.PopupMessage.Message">
+            <summary>
+            Die anzuzeigende Meldung
+            </summary>
+        </member>
+        <member name="T:EAKTEngineV1.Messages.SetProgressbarMessage">
+            <summary>
+            Aktualisiert den Fortschrittsbalken in der Host-Anwendung
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.Messages.SetProgressbarMessage.Value">
+            <summary>
+            Der aktuelle Wert des Fortschrittsbalkens
+            </summary>
+        </member>
+        <member name="T:EAKTEngineV1.Model.DocumentType">
+            <summary>
+            Repräsentiert alle Dokumenttypen
+            </summary>
+        </member>
+        <member name="T:EAKTEngineV1.Model.DocumentIndicator">
+            <summary>
+            Repräsentiert die Einstellungen der Dokumentampel
+            </summary>
+        </member>
+        <member name="T:EAKTEngineV1.Model.EAktDocument">
+            <summary>
+            Repräsentiert ein EAkt-Dokument
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.Model.EAktDocument.Id">
+            <summary>
+            Die Id des Dokuments - wird fortlaufend vergeben
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.Model.EAktDocument.Path">
+            <summary>
+            Der Pfad der Dokumentdatei
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.Model.EAktDocument.PdfPath">
+            <summary>
+            Der Pfad der Pdf-Datei
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.Model.EAktDocument.Name">
+            <summary>
+            Der Name des Dokuments (Dateiname)
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.Model.EAktDocument.GroupName">
+            <summary>
+            Der Name der Gruppe (Verzeichnisname)
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.Model.EAktDocument.Type">
+            <summary>
+            Der Dokumenttyp in Abhängigkeit der Erweiterung
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.Model.EAktDocument.Indicator">
+            <summary>
+            Die Dokumentampel
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.Model.EAktDocument.IsValid">
+            <summary>
+            Gibt an, ob das Dokument gültig ist
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.Model.EAktDocument.IsPresent">
+            <summary>
+            Gibt an, ob das Dokument vorhanden ist
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.Model.EAktDocument.PageCount">
+            <summary>
+            Anzahl der Seiten
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.Model.EAktDocument.Schriftsatz">
+            <summary>
+            Meta-Attribut Schriftssatz
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.Model.EAktDocument.Ersteller">
+            <summary>
+            Meta-Attribut Ersteller
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.Model.EAktDocument.Eingang">
+            <summary>
+            Meta-Attribut Eingangsdatum
+            </summary>
+        </member>
+        <member name="T:EAKTEngineV1.Model.EAktComment">
+            <summary>
+            Repräsentiert einen Kommentar
+            </summary>
+        </member>
+        <member name="T:EAKTEngineV1.Model.PdfBookmark">
+            <summary>
+            Repräsentiert eine Lesemarke
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.Model.PdfBookmark.PageNr">
+            <summary>
+            Die Seitennummer der Lesemarke
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.Model.PdfBookmark.Title">
+            <summary>
+            Der Titel der Lesemarke
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.Model.PdfBookmark.Action">
+            <summary>
+            Die Aktion, die über die Lesemarke ausgeführt wird (in der Regel Aufruf der Seite)
+            </summary>
+        </member>
+        <member name="T:EAKTEngineV1.ViewModel.ScrollMode">
+            <summary>
+            Repräsentiert die verschiedenen Scroll-Varianten
+            </summary>
+        </member>
+        <member name="T:EAKTEngineV1.ViewModel.EAktDocumentsViewModel">
+            <summary>
+            Das ViewModel für eine EAkt-Mappe
+            </summary>
+        </member>
+        <member name="F:EAKTEngineV1.ViewModel.EAktDocumentsViewModel.statusMessage">
+            <summary>
+            Private Variablen
+            </summary>
+        </member>
+        <member name="F:EAKTEngineV1.ViewModel.EAktDocumentsViewModel.nextDocumentCommand">
+            DelegateCommand-Variablen
+        </member>
+        <member name="M:EAKTEngineV1.ViewModel.EAktDocumentsViewModel.SetCurrentDocument">
+            <summary>
+            Nur provisorisch
+            </summary>
+        </member>
+        <member name="M:EAKTEngineV1.ViewModel.EAktDocumentsViewModel.#ctor">
+            <summary>
+            Konstruktor ohne Parameter für die Initialisierung von Variablen
+            </summary>
+        </member>
+        <member name="M:EAKTEngineV1.ViewModel.EAktDocumentsViewModel.#ctor(EAKTEngineV1.Helper.IDocumentService,System.String)">
+            <summary>
+            Konstruktor mit dem Pfad einer EAkt-Mappendatei
+            </summary>
+            <param name="EAktPath"></param>
+        </member>
+        <member name="M:EAKTEngineV1.ViewModel.EAktDocumentsViewModel.#ctor(System.String)">
+            <summary>
+            Konstruktor mit dem Namen der EAkt-Datei
+            </summary>
+            <param name="EAktName"></param>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.EAktDocumentsViewModel.Documents">
+            <summary>
+            Stellt alle Dokumente der Mappe zur Verfügung
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.EAktDocumentsViewModel.AllComments">
+            <summary>
+            Stellt alle Kommentare zur Verfügung
+            </summary>
+        </member>
+        <member name="M:EAKTEngineV1.ViewModel.EAktDocumentsViewModel.AddEAktDocument">
+            <summary>
+            Fügt ein neues EAkt-Dokument zur aktuellen Mappe hinzu  
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EAKTEngineV1.ViewModel.EAktDocumentsViewModel.RemoveEAktDocument(System.Int32)">
+            <summary>
+            Entfernt ein EAkt-Dokument aus der Mappe
+            </summary>
+            <param name="Id"></param>
+        </member>
+        <member name="M:EAKTEngineV1.ViewModel.EAktDocumentsViewModel.SaveComments">
+            <summary>
+            Speichert alle Dokumentkommentare in der Standardkommentardatei
+            </summary>
+        </member>
+        <member name="M:EAKTEngineV1.ViewModel.EAktDocumentsViewModel.SaveComments(System.String)">
+            <summary>
+            Speichert alle Dokumentkommentare in einer angegebenen Kommentardatei
+            </summary>
+            <param name="CommentPath"></param>
+        </member>
+        <member name="M:EAKTEngineV1.ViewModel.EAktDocumentsViewModel.SearchComments(EAKTEngineV1.Helper.CommentSearchRecord)">
+            <summary>
+            Durchsucht alle Kommentare der EAkt-Mappe nach einem Suchbegriff
+            </summary>
+            <param name="documentsVm"></param>
+            <param name="SearchTerm"></param>
+            <returns></returns>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.EAktDocumentsViewModel.EAktName">
+            <summary>
+            Steht für den Namen der EAkt-Mappe
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.EAktDocumentsViewModel.CurrentDocument">
+            <summary>
+            Steht für das aktuelle Dokument in der Mappe für die Datenbindung
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.EAktDocumentsViewModel.ErrorCount">
+            <summary>
+            Liefert die Anzahl der ungültigen Dokumente
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.EAktDocumentsViewModel.DocumentScrollMode">
+            <summary>
+            Steht für den aktuellen Blätter-Modus - im Dokument oder innerhalb der Mappe
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.EAktDocumentsViewModel.NextDocumentCommand">
+            <summary>
+            Das nächste Dokument in der Mappe zum aktuellen Dokument machen
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.EAktDocumentsViewModel.PrevDocumentCommand">
+            <summary>
+            Das vorherige Dokument in der Mappe zum aktuellen Dokument machen
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.EAktDocumentsViewModel.GotoDocumentCommand">
+            <summary>
+            Ein bestimmtes Dokument anhand seiner Nr zum aktuellen Dokument machen
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.EAktDocumentsViewModel.SwitchScrollModeCommand">
+            <summary>
+            Umschalten zwischen Blättern in der Mappe und in einem Dokument
+            </summary>
+        </member>
+        <member name="T:EAKTEngineV1.ViewModel.EAktDocumentViewModel">
+            <summary>
+            Das ViewModel für ein einzelnes EAkt-Dokument
+            </summary>
+        </member>
+        <member name="F:EAKTEngineV1.ViewModel.EAktDocumentViewModel.eaktDocument">
+            <summary>
+            Private Variablen
+            </summary>
+        </member>
+        <member name="M:EAKTEngineV1.ViewModel.EAktDocumentViewModel.#ctor">
+            <summary>
+            Konstruktor ohne Parameter
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.EAktDocumentViewModel.Id">
+            <summary>
+            Die Id des Dokuments
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.EAktDocumentViewModel.Path">
+            <summary>
+            Der Pfad des Dokuments
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.EAktDocumentViewModel.PdfPath">
+            <summary>
+            Der Pfad der Pdf-Datei
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.EAktDocumentViewModel.FirstPagePath">
+            <summary>
+            Steht für den Pfad der ersten/einzigen Pdf-Datei
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.EAktDocumentViewModel.Name">
+            <summary>
+            Der Name des Dokuments
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.EAktDocumentViewModel.Ersteller">
+            <summary>
+            Ersteller-Eigenschaft des Dokuments
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.EAktDocumentViewModel.Schriftsatz">
+            <summary>
+            Schriftsatz-Eigenschaft des Dokuments
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.EAktDocumentViewModel.Eingang">
+            <summary>
+            Eingang-Eigenschaft des Dokuments
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.EAktDocumentViewModel.Indicator">
+            <summary>
+            Ampel-Eigenschaft des Dokuments
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.EAktDocumentViewModel.Type">
+            <summary>
+            Typ des Dokuments
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.EAktDocumentViewModel.IsValid">
+            <summary>
+            Gibt ab, ob das Dokumentformat gültig bzw. das Dokument lesbar ist
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.EAktDocumentViewModel.IsPresent">
+            <summary>
+            Gibt ab, ob die Datei aus der Mappe vorhanden ist
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.EAktDocumentViewModel.IsReady">
+            <summary>
+            Gibt an, ob das Dokument angezeigt werden kann
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.EAktDocumentViewModel.IsSelected">
+            <summary>
+            Gibt an, ob ein Dokument selektiert wurde - gibt es nur im ViewModel
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.EAktDocumentViewModel.PageCount">
+            <summary>
+            Anzahl der Seiten des Dokuments
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.EAktDocumentViewModel.CurrentPageNumber">
+            <summary>
+            Steht für die aktuelle Seitennummer im Rahmen der Datenbindung
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.EAktDocumentViewModel.CommentsVm">
+            <summary>
+            Stellt alle Kommentare des Dokuments als ViewModel zur Verfügung
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.EAktDocumentViewModel.BookmarksVm">
+            <summary>
+            Für die Lesemarken des Dokuments
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.EAktDocumentViewModel.NextPageCommand">
+            <summary>
+            Macht die vorherige Seite des Dokuments zur aktuellen Seitennummer
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.EAktDocumentViewModel.PrevPageCommand">
+            <summary>
+            Macht die nächste Seite des Dokuments zur aktuellen Seitennummer
+            </summary>
+        </member>
+        <member name="T:EAKTEngineV1.ViewModel.EAktCommentViewModel">
+            <summary>
+            Das ViewModel für einen einzelnen Kommentar
+            </summary>
+        </member>
+        <member name="F:EAKTEngineV1.ViewModel.EAktCommentViewModel.comment">
+            <summary>
+            Private Variablen
+            </summary>
+        </member>
+        <member name="M:EAKTEngineV1.ViewModel.EAktCommentViewModel.#ctor">
+            <summary>
+            Konstruktor ohne Parameter
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.EAktCommentViewModel.Id">
+            <summary>
+            Die Id des Kommentars
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.EAktCommentViewModel.Author">
+            <summary>
+            Der Autor des Kommentars
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.EAktCommentViewModel.CreationDate">
+            <summary>
+            Zeitpunkt an dem der Kommentar angelegt wurde
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.EAktCommentViewModel.Comment">
+            <summary>
+            Der Kommentartext
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.EAktCommentViewModel.Link">
+            <summary>
+            Die Verknüpfung des Kommentars
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.EAktCommentViewModel.Color">
+            <summary>
+            Die Farbe des Kommentarfensters
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.EAktCommentViewModel.DocumentPath">
+            <summary>
+            Der Pfad des Dokuments zu dem der Kommentar gehört
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.EAktCommentViewModel.PageNr">
+            <summary>
+            Die Seitennummer, zu der der Kommentar gehört
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.EAktCommentViewModel.XPos">
+            <summary>
+            X-Position des Kommentarfensters
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.EAktCommentViewModel.YPos">
+            <summary>
+            Y-Position des Kommentarfensters
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.EAktCommentViewModel.WinHeight">
+            <summary>
+            Höhe des Kommentarfensters
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.EAktCommentViewModel.WinWidth">
+            <summary>
+            Breite des Kommentarfensters
+            </summary>
+        </member>
+        <member name="T:EAKTEngineV1.ViewModel.EAktCommentsViewModel">
+            <summary>
+            Das ViewModel für alle Kommentare eines EAkt-Dokuments
+            </summary>
+        </member>
+        <member name="F:EAKTEngineV1.ViewModel.EAktCommentsViewModel.comments">
+            <summary>
+            Private Variablen
+            </summary>
+        </member>
+        <member name="M:EAKTEngineV1.ViewModel.EAktCommentsViewModel.#ctor">
+            <summary>
+            Konstruktor ohne Parameter
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.EAktCommentsViewModel.Comments">
+            <summary>
+            Stelle alle Kommentare als EAktCommentViewModel-Objekte zur Verfügung
+            </summary>
+        </member>
+        <member name="M:EAKTEngineV1.ViewModel.EAktCommentsViewModel.AddComment(System.String,System.String,System.String,System.String)">
+            <summary>
+            Hinzufügen eines Kommentars
+            </summary>
+            <param name="Comment"></param>
+            <param name="Link"></param>
+            <param name="Color"></param>
+        </member>
+        <member name="M:EAKTEngineV1.ViewModel.EAktCommentsViewModel.RemoveComment(System.Int32)">
+            <summary>
+            Entfernen eines Kommentars
+            </summary>
+            <param name="Id"></param>
+        </member>
+        <member name="T:EAKTEngineV1.ViewModel.LRUDocumentsViewModel">
+            <summary>
+            Repräsentiert die zuletzt geöffneten EAkt-Dateien
+            </summary>
+        </member>
+        <member name="F:EAKTEngineV1.ViewModel.LRUDocumentsViewModel.documentMaxCount">
+            <summary>
+            Private Variablen
+            </summary>
+        </member>
+        <member name="M:EAKTEngineV1.ViewModel.LRUDocumentsViewModel.#ctor(System.Int32)">
+            <summary>
+            Konstruktor ohne Parameter
+            </summary>
+        </member>
+        <member name="M:EAKTEngineV1.ViewModel.LRUDocumentsViewModel.AddDocument(System.String)">
+            <summary>
+            Hinzufügen eines Dokuments
+            </summary>
+            <param name="Path"></param>
+        </member>
+        <member name="M:EAKTEngineV1.ViewModel.LRUDocumentsViewModel.RemoveDocument">
+            <summary>
+            Entfernen des zuerst hinzugefügten Dokuments
+            </summary>
+        </member>
+        <member name="M:EAKTEngineV1.ViewModel.LRUDocumentsViewModel.ClearDocuments">
+            <summary>
+            Alle Dokumente aus der Liste entfernen
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.LRUDocumentsViewModel.Documents">
+            <summary>
+            Stelle alle Dokumente als Liste zur Verfügung
+            </summary>
+        </member>
+        <member name="T:EAKTEngineV1.ViewModel.MainViewModel">
+            <summary>
+            Die zentrale MainViewModel-Klasse
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.MainViewModel.AppTitle">
+            <summary>
+            Dient nur zum Test der Datenbindung
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.MainViewModel.DispatcherService">
+            <summary>
+            Liefert den DispatcherService, der in der Host-Anwendung registriert wurde
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.MainViewModel.UseLineIndex">
+            <summary>
+            Legt fest, ob beim Indizieren der zeilenbasierte Index verwendet wird
+            Aktuell nur für das Testen ein Thema
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.MainViewModel.CreatePreviewPages">
+            <summary>
+            Legt fest, ob Vorschauseiten angelegt werden
+            Spielt für das Testen eine Rolle
+            </summary>
+        </member>
+        <member name="M:EAKTEngineV1.ViewModel.MainViewModel.#ctor">
+            <summary>
+            Das Hauptview-Model mit allen Commands und Eigenschaften für die Datenbindung
+            </summary>
+        </member>
+        <member name="M:EAKTEngineV1.ViewModel.MainViewModel.LoadEAktAsync(System.String)">
+            <summary>
+            Asynchrones Laden einer EAkt-Mappendatei
+            </summary>
+            <param name="EAktPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAKTEngineV1.ViewModel.MainViewModel.LoadEAktFile(System.String)">
+            <summary>
+            Synchrones Laden einer EAkt-Datei
+            </summary>
+            <param name="EAktPath"></param>
+        </member>
+        <member name="M:EAKTEngineV1.ViewModel.MainViewModel.ReadDirectoryAsync(System.String)">
+            <summary>
+            Wird in erster Linie für die Tests benötigt
+            </summary>
+            <param name="DirectoryPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAKTEngineV1.ViewModel.MainViewModel.ReadDirectoryAsync(System.String,System.String)">
+            <summary>
+            Wird in erster Linie für die Tests benötigt
+            </summary>
+            <param name="DirectoryPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EAKTEngineV1.ViewModel.MainViewModel.ClearStatusLog">
+            <summary>
+            Entfernt alle Nachrichten aus dem Statuslog
+            </summary>
+        </member>
+        <member name="M:EAKTEngineV1.ViewModel.MainViewModel.LogStatus(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Status-Meldung schreiben
+            </summary>
+            <param name="Message"></param>
+            <param name="IsError"></param>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.MainViewModel.MessagesVm">
+            <summary>
+            Stellt alle Statusmeldungen als ViewModel zur Verfügung
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.MainViewModel.DocumentsVm">
+            <summary>
+            Stellt die gesamte Akte mit Dokumenten und Kommentaren zur Verfügung
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.MainViewModel.AppInfo">
+            <summary>
+            Stellt Infos über die App, z.B. für Tests, zur Verfügung
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.MainViewModel.LRULimit">
+            <summary>
+            Anzahl der maximal in der LRU-Liste gespeicherten Einträge
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.MainViewModel.LRUDocuments">
+            <summary>
+            Gibt die Liste der zuletzt benutzten Dokumente zurück
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.MainViewModel.CurrentZoomValue">
+            <summary>
+            Steht für den aktuellen Zoomwert des Pdf Viewer
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.MainViewModel.OpenEAktCommand">
+            <summary>
+            Kommando für das Öffnen einer EAkt-Datei
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.MainViewModel.LoadEAktCommand">
+            <summary>
+            Kommando für das direkte Laden einer EAkt-Datei
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.MainViewModel.OpenEAktAsyncCommand">
+            <summary>
+            Kommando für das asynchrone Öffnen einer EAkt-Datei
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.MainViewModel.LoadEAktAsyncCommand">
+            <summary>
+            Kommando für das asynchrone Laden einer EAkt-Datei
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.MainViewModel.ReadDirectoryAsyncCommand">
+            <summary>
+            Liest eine Verzeichnisstruktur ein
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.MainViewModel.NewEAktCommand">
+            <summary> 
+            Kommando für das neu Anlegen einer EAkt-Mappe
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.MainViewModel.ApplyFilterCommand">
+            <summary>
+            Kommando für das Anwenden des Filters
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.MainViewModel.SaveFilterCommand">
+            <summary>
+            Kommando für das Speichern des Filters
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.MainViewModel.ClearFilterCommand">
+            <summary>
+            Kommando für das Zurücksetzen des Filters
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.MainViewModel.CopySelectedTextCommand">
+            <summary>
+            Kopieren des selektierten Textes im PdfViewer
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.MainViewModel.ZoomInCommand">
+            <summary>
+            Zoom In beim PdfViewer
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.MainViewModel.ZoomOutCommand">
+            <summary>
+            Zoom Out beim PdfViewer
+            </summary>
+        </member>
+        <member name="T:EAKTEngineV1.ViewModel.StatusMessagesViewModel">
+            <summary>
+            Das ViewModel für alle Statusmeldungen
+            </summary>
+        </member>
+        <member name="F:EAKTEngineV1.ViewModel.StatusMessagesViewModel.messages">
+            <summary>
+            Private Variablen
+            </summary>
+        </member>
+        <member name="M:EAKTEngineV1.ViewModel.StatusMessagesViewModel.#ctor">
+            <summary>
+            Konstruktor ohne Parameter
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.StatusMessagesViewModel.Messages">
+            <summary>
+            Alle Nachrichten als MessageViewModel-Objekte
+            </summary>
+        </member>
+        <member name="M:EAKTEngineV1.ViewModel.StatusMessagesViewModel.AddMessage(System.String,System.Boolean)">
+            <summary>
+            Hinfügen einer weiteren Nachricht
+            </summary>
+            <param name="Message"></param>
+            <param name="IsError"></param>
+        </member>
+        <member name="M:EAKTEngineV1.ViewModel.StatusMessagesViewModel.Clear">
+            <summary>
+            Entfernt alle Nachrichten
+            </summary>
+        </member>
+        <member name="T:EAKTEngineV1.ViewModel.StatusMessageViewModel">
+            <summary>
+            Das ViewModel für eine Statusmeldung
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.StatusMessageViewModel.Id">
+            <summary>
+            Die interne Id der Meldung - wird fortlaufend nummeriert
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.StatusMessageViewModel.TimeStamp">
+            <summary>
+            Zeitpunkt, an dem die Meldung angelegt wurde
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.StatusMessageViewModel.Message">
+            <summary>
+            Die Meldung selber
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.StatusMessageViewModel.IsError">
+            <summary>
+             Gibt an, ob die Meldung eine Fehlermeldung ist
+            </summary>
+        </member>
+        <member name="M:EAKTEngineV1.ViewModel.StatusMessageViewModel.ToString">
+            <summary>
+            Gibt alle Details zur Message zurück
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:EAKTEngineV1.ViewModel.PdfBookmarksViewModel">
+            <summary>
+            Das ViewModel für alle Lesemarken eines Dokuments
+            </summary>
+        </member>
+        <member name="F:EAKTEngineV1.ViewModel.PdfBookmarksViewModel.bookmarks">
+            <summary>
+            Private Variablen
+            </summary>
+        </member>
+        <member name="M:EAKTEngineV1.ViewModel.PdfBookmarksViewModel.#ctor(System.String)">
+            <summary>
+            Konstruktor mit Pfad der Pdf-Datei
+            </summary>
+            <param name="PdfPath"></param>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.PdfBookmarksViewModel.Bookmarks">
+            <summary>
+            Steht für alle Lesemarken des Dokuments
+            </summary>
+        </member>
+        <member name="T:EAKTEngineV1.ViewModel.PdfBookmarkViewModel">
+            <summary>
+            Das ViewModel für eine Lesemarke in einem Pdf-Dokument
+            </summary>
+        </member>
+        <member name="M:EAKTEngineV1.ViewModel.PdfBookmarkViewModel.#ctor">
+            <summary>
+            Konstruktor ohne Parameter
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.PdfBookmarkViewModel.PageNr">
+            <summary>
+            Seitennummer der Lesemarke
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.PdfBookmarkViewModel.Title">
+            <summary>
+            Titel der Lesemarke
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.PdfBookmarkViewModel.Action">
+            <summary>
+            Die mit der Lesemarke verknüpfte Aktion
+            </summary>
+        </member>
+        <member name="T:EAKTEngineV1.ViewModel.SearchResultViewModel">
+            <summary>
+            Das ViewModel für das Ergebnis der Volltextsuche
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.SearchResultViewModel.HitId">
+            <summary>
+            Interne ID des Treffers
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.SearchResultViewModel.DocumentPath">
+            <summary>
+            Pfad des Dokuments, in dem der Treffer auftrat
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.SearchResultViewModel.DocumentName">
+            <summary>
+            Name des Dokuments, in dem der Treffer auftrat
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.SearchResultViewModel.DocumentId">
+            <summary>
+            Nr des Dokuments, in dem der Treffer auftrat
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.SearchResultViewModel.Schriftsatz">
+            <summary>
+            Inhalt des Schriftart-Feldes
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.SearchResultViewModel.Result">
+            <summary>
+            Der gefundene Text
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.SearchResultViewModel.ResultScore">
+            <summary>
+            Interne Bewertung des Treffers
+            </summary>
+        </member>
+        <member name="P:EAKTEngineV1.ViewModel.SearchResultViewModel.ResultHTML">
+            <summary>
+            Die gefundene Textstelle im HTML-Format mit Hervorhebung
+            </summary>
+        </member>
+    </members>
+</doc>
